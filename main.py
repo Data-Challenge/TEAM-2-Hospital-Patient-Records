@@ -19,7 +19,7 @@ for x in cleaned_df.index:
     if cleaned_df.loc[x, "gender"] == "M":
         cleaned_df.loc[x, "gender"] = "Male"
     if cleaned_df.loc[x, "gender"] == "F":
-        cleaned_df.loc[x, "gender"] = "Female
+        cleaned_df.loc[x, "gender"] = "Female"
 
 
 print() #linebreak 
