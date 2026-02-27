@@ -25,11 +25,15 @@ print(cleaned_df)
 print(cleaned_df.info())
 
 
-
-
 #ANALYSIS
 
 #1.1 - what is the average stay by admission type? 
-cleaned_df.groupby("Elective")["LengthOfStay"].mean()
-cleaned_df.groupby("Urgent")["LengthOfStay"].mean()
-cleaned_df.groupby("Emergency")["LengthOfStay"].mean()
+cleaned_df.groupby("admission_type")["length_of_stay"].mean()
+
+#1.2 - Which department has the highest readmission rate? 
+readmission_rate = cleaned_df.groupby("department")["readmitted"].mean()
+highest_department = readmission_rate.idxmax()
+highest_value = readmission_rate.max()
+
+#1.3 - How does insurance type affect total charges (list charges by type - is there any causality?) 
+cleaned_df.groupby("insurance")["total_charges"].mean()
