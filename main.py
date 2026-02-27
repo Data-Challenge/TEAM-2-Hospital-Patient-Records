@@ -24,15 +24,19 @@ for x in cleaned_df.index:
 # ANALYSIS
 
 # 1.1 - what is the average stay by admission type? 
-cleaned_df.groupby("admission_type")["length_of_stay"].mean()
+average_stay = cleaned_df.groupby("admission_type")["length_of_stay"].mean()
 
 # 1.2 - Which department has the highest readmission rate? 
 readmission_rate = cleaned_df.groupby("department")["readmitted"].mean()
 highest_department = readmission_rate.idxmax()
 highest_value = readmission_rate.max()
 
-# 1.3 - How does insurance type affect total charges (list charges by type - is there any causality?) 
-cleaned_df.groupby("insurance")["total_charges"].mean()
+#1.3 - How does insurance type affect total charges (list charges by type - is there any causality?) 
+insurance_average = cleaned_df.groupby("insurance")["total_charges"].mean()
+
+print(average_stay) #1.1
+print(highest_department, highest_value) #1.2 
+print(insurance_average)  #1.3
 
 # 1.4 - What percentage of patients in each age group require emergency admission?
 # 0-19
@@ -52,7 +56,11 @@ print(f"Senior emergency admission rate: {senior_emergency_rate}%")
 
 # 1.5 - Is there a relationship between length of stay and total charges?
 
+
+
 # 1.6 - Which department treats the oldest patients on average?
+
+oldpatient_treatment = cleaned_df.groupby("department")["age"].mean().sort_values(ascending=false)
 
 #print(cleaned_df)
 print(cleaned_df.info())
