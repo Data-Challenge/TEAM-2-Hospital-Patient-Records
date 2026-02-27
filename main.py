@@ -6,7 +6,7 @@ original_df = pd.read_csv("hospital.csv")
 cleaned_df = pd.read_csv("hospital.csv")
 
 # Clean up insurance data
-cleaned_df.fillna({"insurance" : "N\A"}, inplace = True)
+cleaned_df.fillna({"insurance" : "N\\A"}, inplace = True)
 
 # Clean up age data
 avg_age = int(cleaned_df["age"].mean())
