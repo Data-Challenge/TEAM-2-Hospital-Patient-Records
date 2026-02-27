@@ -22,3 +22,13 @@ for x in cleaned_df.index:
 
 print(cleaned_df)
 print(cleaned_df.info())
+
+
+
+
+#ANALYSIS
+
+#1.1 - what is the average stay by admission type? 
+cleaned_df.groupby("Elective")["LengthOfStay"].mean()
+cleaned_df.groupby("Urgent")["LengthOfStay"].mean()
+cleaned_df.groupby("Emergency")["LengthOfStay"].mean()
