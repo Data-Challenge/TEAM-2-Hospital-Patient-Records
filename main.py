@@ -60,7 +60,7 @@ print(f"Senior emergency admission rate: {senior_emergency_rate}%")
 
 # 1.6 - Which department treats the oldest patients on average?
 
-oldpatient_treatment = cleaned_df.groupby("department")["age"].mean().sort_values(ascending=false)
+oldpatient_treatment = cleaned_df.groupby("department")["age"].mean().sort_values(ascending = False)
 print(oldpatient_treatment) 
 
 #print(cleaned_df)
