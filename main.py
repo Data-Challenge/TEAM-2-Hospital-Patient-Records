@@ -19,24 +19,32 @@ for x in cleaned_df.index:
     if cleaned_df.loc[x, "gender"] == "M":
         cleaned_df.loc[x, "gender"] = "Male"
     if cleaned_df.loc[x, "gender"] == "F":
-        cleaned_df.loc[x, "gender"] = "Female"
+        cleaned_df.loc[x, "gender"] = "Female
+
+
+print() #linebreak 
 
 # ANALYSIS
 
 # 1.1 - what is the average stay by admission type? 
 average_stay = cleaned_df.groupby("admission_type")["length_of_stay"].mean()
+print(f"Average stay length by admission type {average_stay}%" )
+
+print() #linebreak
 
 # 1.2 - Which department has the highest readmission rate? 
 readmission_rate = cleaned_df.groupby("department")["readmitted"].mean()
 highest_department = readmission_rate.idxmax()
 highest_value = readmission_rate.max()
+print(f" Department with highest re-admission rate:  {highest_department, highest_value}%") 
+
+print() #linebreak
 
 #1.3 - How does insurance type affect total charges (list charges by type - is there any causality?) 
 insurance_average = cleaned_df.groupby("insurance")["total_charges"].mean()
+print(f"highest total charge by insurance type: {insurance_average}%") 
 
-print(average_stay) #1.1
-print(highest_department, highest_value) #1.2 
-print(insurance_average)  #1.3
+print() #linebreak
 
 # 1.4 - What percentage of patients in each age group require emergency admission?
 # 0-19
@@ -54,14 +62,20 @@ senior = cleaned_df[cleaned_df['age'].between(20, 59)]
 senior_emergency_rate = round((senior['admission_type'] == 'Emergency').mean() * 100, 2)
 print(f"Senior emergency admission rate: {senior_emergency_rate}%")
 
+
+print() #linebreak 
+
 # 1.5 - Is there a relationship between length of stay and total charges?
 
-
+print() #linebreak 
 
 # 1.6 - Which department treats the oldest patients on average?
 
 oldpatient_treatment = cleaned_df.groupby("department")["age"].mean().sort_values(ascending = False)
-print(oldpatient_treatment) 
+print(f"Department treating the average oldest patients: {oldpatient_treatment}%")
+
+print() #linebreak 
+
 
 #print(cleaned_df)
 print(cleaned_df.info())
