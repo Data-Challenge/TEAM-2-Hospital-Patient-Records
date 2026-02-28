@@ -20,10 +20,10 @@ That's it for installation!
 
 ## **Repository Structure**
 
-README.md - Project Documentation 
-hospital.csv - Raw dataset
-main.py - Python script containing data analysis, cleaning, visualization
-requirements.txt - external requirements
+- README.md = Project Documentation 
+- hospital.csv = Raw dataset
+- main.py = Python script containing data analysis, cleaning, visualization
+- requirements.txt = external requirements
 
 
 ## **Issues & Fix**
