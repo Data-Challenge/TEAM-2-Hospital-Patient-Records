@@ -30,10 +30,8 @@ That's it for installation!
 - hospital.csv = Raw dataset
 - main.py = Python script containing data analysis, cleaning, visualization
 - requirements.txt = external requirements
-
-
-## **Issues & Fix**
-In this section, we will define issues and fix the data.
-
-> ### Issues
+  
+## **Data Cleaning**
+## **Data Analysis**
+## **Data Visualization**
 
