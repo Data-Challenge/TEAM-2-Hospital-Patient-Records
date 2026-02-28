@@ -49,3 +49,13 @@ That's it for installation!
 ### 6.
 ## **Data Visualization**
 
+
+## **Key Insights**
+
+- Elective is the longest average stay by admission type.
+- Pediatrics has the highest readmission rate by department.
+- Charges differ from best insurance coverage to least insurance coverage by $388.61. Insurance does not majorly affect charges as each level of insurance is <$150 more expensive then the next lower level.
+- There are almost no relationship between length of stay and total charges from this data since there is large difference between largest charge per day and lowest charge per day.
+- Orthopedics department treats the oldest patients on average at a 51.88 average age at treatment.
+
+
