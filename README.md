@@ -12,12 +12,18 @@ That's it for installation!
 
 ---
 
-##**Purpose**
-This Hospital Data Analysis project analyzes patient data from hospitals used to identify patterns in admission rates, the impact of different insurances on patient charges, readmission rates, impact of gender on charges, and length of stay based on departments. 
+## **Purpose**
 
-The goal for this project is to perform data exploration, data cleaning, statistical analysis, and to visualize the patterns that emerged while extracting the important information from this dataset. 
+  This Hospital Data Analysis project analyzes patient data from hospitals used to identify patterns in admission rates, the impact of different insurances on patient charges, readmission rates, impact of gender on charges, and length of stay based on departments. 
 
+  The goal for this project is to perform data exploration, data cleaning, statistical analysis, and to visualize the patterns that emerged while extracting the important information from this dataset. 
 
+## **Repository Structure**
+
+README.md - Project Documentation 
+hospital.csv - Raw dataset
+main.py - Python script containing data analysis, cleaning, visualization
+requirements.txt - external requirements
 
 
 ## **Issues & Fix**
