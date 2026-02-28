@@ -4,7 +4,7 @@
 
 
 Julian Shin, 7647613
-
+Jongbeom Shim, 7820434
 
 ## **Installation**
 Clone or Download ZIP this project to your local machine.
