@@ -104,7 +104,19 @@ print() #newline
 # VISUALIZATIONS
 
 # Age distribution by department
-cleaned_df.plot(kind='bar')
+def categorise_age(age):
+    if age <= 19:
+        return '0-19'
+    elif age <= 59:
+        return '20-59'
+    else:
+        return '60-'
+
+age_distribution = cleaned_df.copy()
+age_distribution = age_distribution[['age', 'department']]
+age_distribution['age_distribution'] = age_distribution['age'].apply(categorise_age)
+age_distribution = age_distribution.groupby(['age_distribution', 'department']).size().unstack()
+age_distribution.plot(kind='bar', figsize=(6, 4), width=0.8)
 
 # Price Increase per day for each department
 cleaned_df.plot(x='length_of_stay', y='total_charges', kind='scatter')
