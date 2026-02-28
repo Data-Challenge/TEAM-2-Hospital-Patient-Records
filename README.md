@@ -11,6 +11,15 @@ Run `pip install -r requirement.txt` on terminal to download all dependencies th
 That's it for installation!
 
 ---
+
+##**Purpose**
+This Hospital Data Analysis project analyzes patient data from hospitals used to identify patterns in admission rates, the impact of different insurances on patient charges, readmission rates, impact of gender on charges, and length of stay based on departments. 
+
+The goal for this project is to perform data exploration, data cleaning, statistical analysis, and to visualize the patterns that emerged while extracting the important information from this dataset. 
+
+
+
+
 ## **Issues & Fix**
 In this section, we will define issues and fix the data.
 
