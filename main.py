@@ -111,7 +111,7 @@ cleaned_df.plot(x='length_of_stay', y='total_charges', kind='scatter')
 
 
 
-# Revenue Generated buy each department
+# Revenue Generated buy each department (bar graph)
 
 department_revenue = cleaned_df.groupby("department")["total_charges"].sum()
 fig, ax = plt.subplots()
@@ -128,6 +128,24 @@ ax.ticklabel_format(style='plain', axis='y')
 ax.set_yticks(np.arange(0,max(revenues) + 200000,200000))
 
 plt.show()
+
+
+#Total charge distributions by Gender (histogram overlay) 
+
+fig, ax = plt.subplots() 
+male = cleaned_df[cleaned_df["gender"] == "Male"]["total_charges"]
+female = cleaned_df[cleaned_df["gender"] == "Female"]["total_charges"]
+ax.hist(male, bins=10, alpha=0.5, label= "Male")
+ax.hist(female, bins=10, alpha=0.5, label= "Female")
+
+ax.set_xlabel("Total Charges")
+ax.set_ylabel("Number of Patients")
+ax.set_title("Total charges distributed by Gender")
+ax.legend()
+ax.grid(alpha=0.5)
+
+plt.show() 
+
 
 
 
