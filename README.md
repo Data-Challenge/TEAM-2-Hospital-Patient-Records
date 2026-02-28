@@ -1,5 +1,11 @@
 # TEAM-2-Hospital-Patient-Records
 
+# **Contributers**
+
+
+Julian Shin, 7647613
+
+
 ## **Installation**
 Clone or Download ZIP this project to your local machine.
 
