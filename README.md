@@ -32,6 +32,14 @@ That's it for installation!
 - requirements.txt = external requirements
   
 ## **Data Cleaning**
+1. Handle missing values
+> Insurance has 106 missing values(null values): instead of empty value we can insert “None” or None
+2. Fix data type issues
+> All columns’ data type looks legit.
+3. Address inconsistencies
+> Gender has two different version for one gender (e.g. M and Male for males and F and Female for females): to standardize we use the whole word version.
+4. Validate cleaned data
+> Age column contains value -1, Instead of dropping all data values containing -1; change to mean age 
 ## **Data Analysis**
 ### 1.
 ### 2.
