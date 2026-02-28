@@ -1,6 +1,6 @@
 # TEAM-2-Hospital-Patient-Records
 
-# *Contributers*
+### **Contributers**
 
 
 Julian Shin, 7647613
