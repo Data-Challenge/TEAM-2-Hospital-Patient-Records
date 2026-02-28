@@ -41,12 +41,12 @@ That's it for installation!
 4. Validate cleaned data
 > Age column contains value -1, Instead of dropping all data values containing -1; change to mean age 
 ## **Data Analysis**
-### 1.
-### 2.
-### 3.
+### 1. Elective is the longest average stay by admission type.
+### 2. Pediatrics has the highest readmission rate by department.
+### 3. Difference between most expensive insurance type and least expensive: $388.61
 ### 4.
 ### 5.
-### 6.
+### 6. Orthopedics department treats the oldest patients on average at a 51.88 average age at treatment. 
 ## **Data Visualization**
 
 
