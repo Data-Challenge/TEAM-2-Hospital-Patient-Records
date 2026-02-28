@@ -33,20 +33,20 @@ That's it for installation!
   
 ## **Data Cleaning**
 1. Handle missing values
-> Insurance has 106 missing values(null values): instead of empty value we can insert “None” or None
-2. Fix data type issues
-> All columns’ data type looks legit.
+> Insurance has 106 missing values(null values): instead of empty/None value we can insert "N\A”.
 3. Address inconsistencies
 > Gender has two different version for one gender (e.g. M and Male for males and F and Female for females): to standardize we use the whole word version.
 4. Validate cleaned data
-> Age column contains value -1, Instead of dropping all data values containing -1; change to mean age 
+> Age column contains value -1, Instead of dropping all data values containing -1; change to mean age .
+
 ## **Data Analysis**
 ### 1. Elective is the longest average stay by admission type.
 ### 2. Pediatrics has the highest readmission rate by department.
 ### 3. Difference between most expensive insurance type and least expensive: $388.61
 ### 4.
 ### 5.
-### 6. Orthopedics department treats the oldest patients on average at a 51.88 average age at treatment. 
+### 6. Orthopedics department treats the oldest patients on average at a 51.88 average age at treatment.
+
 ## **Data Visualization**
 
 
