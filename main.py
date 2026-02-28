@@ -33,7 +33,9 @@ average_stay = cleaned_df.groupby("admission_type")["length_of_stay"].mean()
 
 print("\n== 1.1 - What is the average stay by admission type?  ==")
 for admission, value in average_stay.items():
-    print(f"{admission}:  {value:.6f} days")
+    print(f"{admission}:  {value:.2f} days")
+
+print("Elective is the longest average stay by admission type.\n")
 
 # 1.2 - Which department has the highest readmission rate? 
 readmission_rate = cleaned_df.groupby("department")["readmitted"].mean()
@@ -41,14 +43,26 @@ highest_department = readmission_rate.idxmax()
 highest_value = readmission_rate.max()
 
 print("\n== 1.2 - Which department has the highest readmission rate?  ==")
-print(f" Department with highest re-admission rate:  {highest_department, highest_value}\n") 
+print(f" {highest_department}:  {highest_value:.2f}") 
+print("Pediatrics has the highest readmission rate by department.\n")
 
 #1.3 - How does insurance type affect total charges (list charges by type - is there any causality?) 
 insurance_average = cleaned_df.groupby("insurance")["total_charges"].mean().sort_values(ascending=False)
 
+high_insurance=insurance_average.idxmax()
+high_value=insurance_average.max()
+low_insurance=insurance_average.idxmin()
+low_value=insurance_average.min()
+
+difference=high_value - low_value
+
 print("\n== 1.3 - How does insurance type affect total charges? ==")
 for insurance_type, value in insurance_average.items():
-    print(f"{insurance_type}: ${value:.6f}")
+    print(f"{insurance_type}: ${value:.2f}")
+
+print(f"\nDifference between most expensive insurance type and least expensive: ${difference:.2f}\n")
+print("Charges differ from best insurance coverage to least insurance coverage by $388.61.\nInsurance does not majorly affect charges as each level of insurance is <$150 more expensive then the next lower level.\n")
+
 
 
 # 1.4 - What percentage of patients in each age group require emergency admission?
@@ -96,9 +110,10 @@ oldpatient_treatment = cleaned_df.groupby("department")["age"].mean().sort_value
 
 print("\n== 1.6 -  Which department treats the oldest patients on average? ==")
 for department_type, value in oldpatient_treatment.items():
-    print(f"{department_type}: {value:.6f}")
+    print(f"{department_type}: {value:.2f}")
 
-print() #newline
+print("\nOrthopedics department treats the oldest patients on average at a 51.88 average age at treatment.\n")
+
 
 
 # VISUALIZATIONS
